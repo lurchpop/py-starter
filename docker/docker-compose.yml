@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../app:/app
+    entrypoint: ["tail", "-f", "/dev/null"]
+    working_dir: /app
